@@ -10,7 +10,7 @@ app.use(express.static(__dirname));
 //app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.render('index.htm');
+  response.sendFile('index.htm')
 });
 
 app.listen(app.get('port'), function() {
